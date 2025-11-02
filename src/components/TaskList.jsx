@@ -5,7 +5,7 @@ export default function TaskList({ tasks, refreshTasks, filter }) {
   const [uniqueDateMap, setUniqueDateMap] = useState(new Map());   // a map state is created so React can watch this
   useEffect(() => {
     dateCollector(tasks,setUniqueDateMap);
-  }, [tasks]);
+  }, [tasks,filter]);
   return (
     <>
       {Array.from(uniqueDateMap.entries()).map(([key, tasks]) => (

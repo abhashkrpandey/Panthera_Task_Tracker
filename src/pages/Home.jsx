@@ -37,10 +37,13 @@ export default function Home({ refreshTasks, taskList, filter }) {
               >
                 {hasToAdd ? <X /> : <Plus />}
               </button>
-               (hasToAdd)&& (
-               <div className="w-full">
+              {
+                hasToAdd===true?(<>
+                    <div className="w-full">
                  <TaskForm refreshTasks={refreshTasks} />
                </div>
+                </>):(<></>)
+              }           
               </>
             )
             : (

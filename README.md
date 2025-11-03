@@ -1,16 +1,58 @@
-# React + Vite
+# Task_Tracker
+A task_tracker to monitor daily tasks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>Functionalities:</h2>
+<ol>
+  <li>Add a new task</li>
+  <li>Edit the existing task</li>
+  <li>Delete a existing task</li>
+</ol>
 
-Currently, two official plugins are available:
+#  Live Link
+https://panthera-task-tracker.onrender.com/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+<h2>File Structure:</h2>
+<pre>
+  
+├── src/
+     ├── assets ---- contains image icon for the webapp
+     |
+     ├──components/ 
+     |          ├── TaskForm.jsx -- Form to collect info about task
+     |          ├── TaskItem.jsx -- Each Item/Task 
+     |          ├── TaskList.jsx -- Returns a list of tasks
+     | 
+     ├──pages/
+     |       ├──Home.jsx -- Home Page of Webapp
+     |
+     ├── services/
+     |           ├── TaskServices.jsx -- contains all functions for editing/adding/deleting tasks
+     ├──utils/
+     |       ├── Functions.jsx -- contains other functions 
+     └── public/
+</pre>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<h2>Installation</h2>
+<ol>
+<li>Clone this repo</li>
+  
+```bash
+ git clone https://github.com/abhashkrpandey/Panthera_Task_Tracker.git
+ cd Panthera_Task_Tracker
+ npm install
+```
+</ol>
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+<h2>Usage</h2>
+<ol>
+  <li>To run application locally</li>
+
+```bash
+ npm run dev
+```
+</ol>
+
+

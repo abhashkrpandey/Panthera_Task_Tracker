@@ -33,6 +33,7 @@ return (
                     key={task.id}
                     task={task}
                     refreshTasks={refreshTasks}
+                    filter={filter}
                   />
                 ))}
               </>

@@ -8,7 +8,7 @@ import {
   statusChangeTask,
 } from "../services/TaskService";
 import { inputter } from "../utils/Functions";
-export default function TaskItem({ task, refreshTasks }) {
+export default function TaskItem({ task, refreshTasks ,filter}) {
   const [isEditOn, setIsEditOn] = useState(false);
   const [title, setTitle] = useState(task.taskTitle);
   const [description, setDescription] = useState(task.taskDescription);
@@ -62,7 +62,7 @@ export default function TaskItem({ task, refreshTasks }) {
       />
 
       <div className="flex-1 mx-3">
-        {isEditOn ? (
+        {(isEditOn && filter!=="complete") ? (
           <div className="flex flex-col gap-1">
             <input
               id="title"
@@ -96,7 +96,7 @@ export default function TaskItem({ task, refreshTasks }) {
       </div>
 
       <div className="flex items-center gap-3 text-gray-700">
-        {isEditOn ? (
+        { filter!=="complete" ?  isEditOn ? (
           <Save
             className="cursor-pointer hover:text-green-600"
             onClick={saveTaskMode}
@@ -106,7 +106,7 @@ export default function TaskItem({ task, refreshTasks }) {
             className="cursor-pointer hover:text-blue-600"
             onClick={editTaskMode}
           />
-        )}
+        ) :(<></>)}
         <Trash
           className="cursor-pointer hover:text-red-600"
           onClick={deleteTaskMode}

@@ -23,8 +23,8 @@ export default function Home({ refreshTasks, taskList, filter }) {
             filter={filter}
           />
         </div>
-        <div className="flex flex-row-reverse  bottom-0 right-5 sticky">
-          <div className="w-[100px] sm:w-[150px] md:w-[300px] flex flex-col items-end gap-3">
+        <div className="flex flex-row justify-between  bottom-0  sticky">
+          <div className="w-[200px] sm:w-[250px] md:w-[300px] flex flex-col items-start gap-3">
             <button
               className={`p-2 rounded-md text-white ${
                 hasToAdd
@@ -35,12 +35,12 @@ export default function Home({ refreshTasks, taskList, filter }) {
             >
               {hasToAdd ? <X /> : <Plus />}
             </button>
-
             {hasToAdd && (
               <div className="w-full">
                 <TaskForm refreshTasks={refreshTasks} />
               </div>
             )}
+            
           </div>
         </div>
       </div>

@@ -38,6 +38,21 @@ https://panthera-task-tracker.onrender.com/
 <li>Clone this repo</li>
   
 ```bash
-  git clone https://github.com/abhashkrpandey/Panthera_Task_Tracker.git
+ git clone https://github.com/abhashkrpandey/Panthera_Task_Tracker.git
  cd Panthera_Task_Tracker
+ npm install
 ```
+</ol>
+
+
+
+<h2>Usage</h2>
+<ol>
+  <li>To run application locally</li>
+
+```bash
+ npm run dev
+```
+</ol>
+
+

@@ -24,23 +24,26 @@ export default function Home({ refreshTasks, taskList, filter }) {
           />
         </div>
         <div className="flex flex-row justify-between  bottom-0  sticky">
-          <div className="w-[200px] sm:w-[250px] md:w-[300px] flex flex-col items-start gap-3">
-            <button
-              className={`p-2 rounded-md text-white ${
-                hasToAdd
-                  ? "bg-red-500 hover:bg-red-600"
-                  : "bg-green-600 hover:bg-green-700"
-              } transition`}
-              onClick={taskAdder}
-            >
-              {hasToAdd ? <X /> : <Plus />}
-            </button>
+          <div className="flex flex-col items-start gap-3">
+            {filter !== "complete" ? (
+              <button
+                className={`p-2 rounded-md text-white ${
+                  hasToAdd
+                    ? "bg-red-500 hover:bg-red-600"
+                    : "bg-green-600 hover:bg-green-700"
+                } transition`}
+                onClick={taskAdder}
+              >
+                {hasToAdd ? <X /> : <Plus />}
+              </button>
+            ) : (
+              <></>
+            )}
             {hasToAdd && (
               <div className="w-full">
                 <TaskForm refreshTasks={refreshTasks} />
               </div>
             )}
-            
           </div>
         </div>
       </div>

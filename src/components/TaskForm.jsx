@@ -7,7 +7,7 @@ export default function TaskForm({ refreshTasks }) {
   const descriptionRef = useRef(null);
 
   return (
-    <div className="bg-gray-200 flex flex-col w-[100px] sm:w-[150px] md:w-[300px] p-3 rounded">
+    <div className="bg-gray-200 flex flex-col w-[200px] sm:w-[250px] md:w-[300px] p-3 rounded">
       <div className="text-lg text-center mb-2">Add New Task</div>
 
       <input

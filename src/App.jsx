@@ -9,7 +9,7 @@ function App() {
   const [filter, setFilter] = useState("all");
 
   /**
-   * after localStorage data changes this function refresh the whole page to load new data
+   * after localStorage data changes this function refresh the taskList to load new data
    */
   function refreshTasks() {
     setTaskList(getTask());
